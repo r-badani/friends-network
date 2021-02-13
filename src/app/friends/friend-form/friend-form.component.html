@@ -1,13 +1,19 @@
 <form [formGroup]="baseForm">
+  <div *ngIf="formIndex === 0; then thenBlock; else elseBlock"></div>
+  <ng-template #thenBlock>
     <h3>My details</h3>
+  </ng-template>
+  <ng-template #elseBlock>
+    <h3>Friend #{{ formIndex }}</h3>
     <button
-    *ngIf="formIndex > 1"
+      *ngIf="formIndex > 1"
       type="button"
       mat-icon-button
       (click)="removeForm(formIndex)"
     >
       <mat-icon class="icon">close</mat-icon>
     </button>
+  </ng-template>
   <div class="row">
     <div class="col">
       <mat-form-field>

@@ -1,35 +1,36 @@
-
-      <form class="wrapper">
-        <div class="row">
-          <div class="col">
-            <mat-form-field>
-              <input
-                matInput
-                placeholder="Name"
-              />
-            </mat-form-field>
-          </div>
-          <div class="col">
-            <mat-form-field>
-              <input
-                matInput
-                type="number"
-                placeholder="Age"
-              />
-              <span matSuffix>Years</span>
-              <mat-error> Age is required</mat-error>
-            </mat-form-field>
-          </div>
-          <div class="col">
-            <mat-form-field>
-              <input
-                matInput
-                type="number"
-                placeholder="Weight"
-                formControlName="weight"
-              />
-              <mat-error> Weight is required</mat-error>
-            </mat-form-field>
-          </div>
-        </div>
-      </form>
+<form [formGroup]="baseForm">
+    <h3>My details</h3>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Name"
+          formControlName="name"
+        />
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <input
+          matInput
+          type="number"
+          placeholder="Age"
+          formControlName="age"
+        />
+        <span matSuffix>Years</span>
+        <mat-error> Age is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <input
+          matInput
+          type="number"
+          placeholder="Weight"
+          formControlName="weight"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+</form>

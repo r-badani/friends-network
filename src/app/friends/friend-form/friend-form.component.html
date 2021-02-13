@@ -1,13 +1,14 @@
-<form [formGroup]="baseForm">
+<form class="wrapper" [formGroup]="baseForm">
   <div *ngIf="formIndex === 0; then thenBlock; else elseBlock"></div>
   <ng-template #thenBlock>
-    <h3>My details</h3>
+    <h3 class="wrapper__head-title">My details</h3>
   </ng-template>
   <ng-template #elseBlock>
-    <h3>Friend #{{ formIndex }}</h3>
+    <h3 class="wrapper__head-title">Friend #{{ formIndex }}</h3>
     <button
       *ngIf="formIndex > 1"
       type="button"
+      class="wrapper__head-closeBtn"
       mat-icon-button
       (click)="removeForm(formIndex)"
     >

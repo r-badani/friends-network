@@ -1,3 +1,42 @@
-.mat-form-field {
-  width: 100%;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &__head {
+    &-title {
+      padding: 4px 16px;
+      margin: 0;
+    }
+
+    &-closeBtn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      background: transparent;
+    }
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.row {
+  display: flex;
+  margin: 0 16px;
+}
+
+.col {
+  display: flex;
+  flex: 1;
+  margin-right: 16px;
+
+  & > * {
+    flex: 1;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }

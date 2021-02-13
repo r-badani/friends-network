@@ -3,7 +3,16 @@
     <mat-card-header>
     </mat-card-header>
     <mat-card-content>
-  <app-friend-form></app-friend-form>
+      <section
+        *ngFor="let userForm of userFormGroup; let idx = index"
+      >
+        <article class="article">
+          <app-friend-form
+            [baseForm]="userForm"
+            [formIndex]="idx"
+          ></app-friend-form>
+        </article>
+      </section>
     </mat-card-content>
     <mat-card-actions>
       <button mat-stroked-button>Cancel</button>

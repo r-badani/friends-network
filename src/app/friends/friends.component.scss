@@ -1,0 +1,49 @@
+.c-card {
+  padding: 16px 0;
+  border-radius: 0;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+
+    &-closeBtn {
+      top: -13px;
+    }
+  }
+
+  &__body {
+    max-height: 70vh;
+    overflow: scroll;
+  }
+
+  &__form {
+    position: relative;
+    margin: 16px 28px;
+    background-color: #6d6d6d;
+    border-radius: 4px;
+
+    &:first-child {
+      margin: 0;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    margin: 10px 20px;
+    border-top: 1px solid #ddd;
+
+    & > * {
+      padding: 0 9px;
+    }
+
+    .spacer {
+      flex: auto;
+    }
+
+    .icon {
+      margin-top: -4px;
+    }
+  }
+}

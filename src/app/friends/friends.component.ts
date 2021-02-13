@@ -29,5 +29,9 @@ export class FriendsComponent implements OnInit {
     });
   }
 
+  public appendForm(): void {
+    this.userFormArray?.push(FriendFormComponent.addForm());
+  }
+
   onSubmit() {}
 }

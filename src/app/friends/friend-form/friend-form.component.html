@@ -1,6 +1,7 @@
 <form [formGroup]="baseForm">
     <h3>My details</h3>
     <button
+    *ngIf="formIndex > 1"
       type="button"
       mat-icon-button
       (click)="removeForm(formIndex)"

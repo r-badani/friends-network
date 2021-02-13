@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
 import { FriendFormComponent } from './friend-form/friend-form.component';
+import { FriendsService } from './services/friends.service';
 
 @Component({
   selector: 'app-friends',
@@ -18,7 +19,7 @@ export class FriendsComponent implements OnInit {
     return this.userFormArray?.controls as FormGroup[];
   }
 
-  constructor() {}
+  constructor(private service: FriendsService) {}
   ngOnInit(): void {
     this.initializeUserFormGroup();
   }
@@ -37,5 +38,7 @@ export class FriendsComponent implements OnInit {
     this.userFormArray?.removeAt(formIndex);
   }
 
-  onSubmit() {}
+  onSubmit() {
+    this.service.processInputData(this.group.value.users)
+  }
 }

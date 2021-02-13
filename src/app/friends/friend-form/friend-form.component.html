@@ -1,5 +1,12 @@
 <form [formGroup]="baseForm">
     <h3>My details</h3>
+    <button
+      type="button"
+      mat-icon-button
+      (click)="removeForm(formIndex)"
+    >
+      <mat-icon class="icon">close</mat-icon>
+    </button>
   <div class="row">
     <div class="col">
       <mat-form-field>

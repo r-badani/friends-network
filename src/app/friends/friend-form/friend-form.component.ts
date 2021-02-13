@@ -13,12 +13,19 @@ export class FriendFormComponent {
   @Input()
   public formIndex!: number;
 
+  @Output()
+  public removeFormEvt: EventEmitter<number> = new EventEmitter<number>();
+
   static addForm(): FormGroup {
     return new FormGroup({
       name: new FormControl(''),
       age: new FormControl(''),
       weight: new FormControl(''),
     });
+  }
+
+  public removeForm(formIndex: number): void {
+    this.removeFormEvt.next(formIndex);
   }
   constructor() {}
 

@@ -10,6 +10,7 @@
           <app-friend-form
             [baseForm]="userForm"
             [formIndex]="idx"
+            (removeFormEvt)="removeForm($event)"
           ></app-friend-form>
         </article>
       </section>

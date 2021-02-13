@@ -33,5 +33,9 @@ export class FriendsComponent implements OnInit {
     this.userFormArray?.push(FriendFormComponent.addForm());
   }
 
+  public removeForm(formIndex: number) {
+    this.userFormArray?.removeAt(formIndex);
+  }
+
   onSubmit() {}
 }

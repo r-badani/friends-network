@@ -5,6 +5,7 @@
       <mat-form-field>
         <input
           matInput
+          [name]="'name-' + formIndex"
           placeholder="Name"
           formControlName="name"
         />
@@ -14,6 +15,7 @@
       <mat-form-field>
         <input
           matInput
+          [name]="'age-' + formIndex"
           type="number"
           placeholder="Age"
           formControlName="age"
@@ -26,6 +28,7 @@
       <mat-form-field>
         <input
           matInput
+          [name]="'weight-' + formIndex"
           type="number"
           placeholder="Weight"
           formControlName="weight"

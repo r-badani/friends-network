@@ -8,6 +8,7 @@ import { FriendsComponent } from './friends.component';
   declarations: [FriendsComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [FriendsComponent],
 })
 export class FriendsModule { }

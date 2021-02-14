@@ -18,7 +18,7 @@ export class FriendsEffects {
         FriendActions.addFriend.type
       ),
       mergeMap((action) =>
-        this.friendDataService.processInputData(action.friends).pipe(
+        this.friendDataService.addFriends(action.friends).pipe(
           map((network) => {
             return FriendActions.addFriendSuccess({ network });
           }),

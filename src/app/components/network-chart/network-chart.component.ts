@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 import { select, selectAll } from 'd3-selection';
 import { scaleOrdinal } from 'd3-scale';
 import {
@@ -11,6 +11,7 @@ import {
 import { line } from 'd3-shape';
 import { schemeTableau10 } from 'd3-scale-chromatic';
 import { FriendsService } from '../../friends/services/friends.service';
+import { Link, User } from 'src/app/friends/models';
 const d3 = {
   select,
   selectAll,
@@ -31,8 +32,26 @@ const d3 = {
 })
 export class NetworkChartComponent implements OnInit {
   private _nodes: any;
-  private _links: any;
+  private _links: Link[];
   private _colorScale = d3.scaleOrdinal(d3.schemeTableau10);
+
+  @Input()
+  set nodes(nodes) {
+    this._nodes = nodes;
+  }
+
+  @Input()
+  set links(links) {
+    this._links = links;
+  }
+
+  get nodes(): any {
+    return this._nodes;
+  }
+
+  get links(): any {
+    return this._links;
+  }
 
   private _svg: any;
   private _simulation: any;
@@ -98,6 +117,7 @@ export class NetworkChartComponent implements OnInit {
   }
 
   private initializeSimulation() {
+    console.log('initializeSimulation',this._nodes)
     this._simulation = d3
       .forceSimulation(this._nodes)
       .force('charge', d3.forceManyBody().strength(100))
@@ -133,6 +153,7 @@ export class NetworkChartComponent implements OnInit {
   }
 
   private drawNodes() {
+    console.log('drawNodes',this._nodes)
     this._node = this._svg
       .selectAll('circle')
       .data(this._nodes)
@@ -215,6 +236,8 @@ export class NetworkChartComponent implements OnInit {
   }
 
   private generateChart() {
+    this.drawChartSvg();
+    this.initializeSimulation();
     this.drawLinks();
     this.drawNodes();
     this.insertImage();
@@ -223,14 +246,44 @@ export class NetworkChartComponent implements OnInit {
 
   constructor(private service: FriendsService) {}
 
+  private removeGraph(): void {
+    this._svg.selectAll('*').remove();
+  }
+
+  ngOnDestroy(): void {
+    this.removeGraph();
+  }
+
   ngOnInit(): void {
     this._options.width = window.innerWidth;
     this._options.height = window.innerHeight - this._options.margin;
-    this._nodes = this.service.network.users;
-    this._links = this.service.network.links;
-
-    this.drawChartSvg();
-    this.initializeSimulation();
     this.generateChart();
+  }
+
+  ngOnChanges(change: SimpleChanges): void {
+    const { nodes, links } = change;
+
+    // skip first change
+    if ((nodes && nodes.isFirstChange()) || (links && links.isFirstChange())) {
+      return;
+    }
+
+    // if (chartLayout && chartLayout.isFirstChange()) {
+    //   return;
+    // }
+
+    // /* changes to chart layout
+    //     warrants for chart destroy &redraw */
+    // if (chartLayout) {
+    //   this.removeGraph();
+    //   this.loadGraph()
+    //   return;
+    // }
+
+    // Just update the data of the chart.
+    if (nodes && links) {
+      this.removeGraph()
+      this.generateChart()
+    }
   }
 }

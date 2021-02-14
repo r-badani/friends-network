@@ -2,6 +2,9 @@ import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
 import { BaseFormComponent } from './base-form/base-form.component';
 import { FriendsService } from './../services/friends.service';
+import { FriendsNetworkState } from '../state/friends.reducer';
+import { Store } from '@ngrx/store';
+import { addFriend } from '../state/friends.action';
 
 @Component({
   selector: 'app-friend-form',
@@ -21,7 +24,7 @@ export class FriendFormComponent {
 
   onAdd = new EventEmitter();
 
-  constructor(private service: FriendsService) {}
+  constructor(private service: FriendsService, private store: Store<FriendsNetworkState>) {}
   ngOnInit(): void {
     this.initializeUserFormGroup();
   }
@@ -46,7 +49,8 @@ export class FriendFormComponent {
   }
 
   onSubmit() {
-    //this.service.processInputData(this.group.value.users);
+    this.store.dispatch(addFriend({ friends: this.group.value.users}));
+    this.group.reset();
     this.onAdd.emit();
   }
 }

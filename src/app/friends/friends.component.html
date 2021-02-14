@@ -9,5 +9,7 @@
   </mat-toolbar>
   </nav>
   <main>
-    <app-network-chart></app-network-chart>
+    <div *ngIf="network | async as network">
+      <app-network-chart [nodes]="network.users" [links]="network.links"></app-network-chart>
+    </div>
   </main>

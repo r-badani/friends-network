@@ -1,16 +1,21 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
+import { Store } from '@ngrx/store';
+import { Observable } from 'rxjs';
 import { FriendFormComponent } from './friend-form/friend-form.component';
+import { Network } from './models';
+import { friendNetworkSelector, FriendsNetworkState } from './state/friends.reducer';
 
 @Component({
   selector: 'app-friends',
   templateUrl: './friends.component.html',
   styleUrls: ['./friends.component.scss'],
 })
-export class FriendsComponent {
+export class FriendsComponent implements OnInit {
+  network!: Observable<Network>;
   title = 'friends-network';
 
-  constructor(public dialog: MatDialog) {}
+  constructor(public dialog: MatDialog, private store: Store<FriendsNetworkState>) {}
 
   openDialog() {
     const dialogRef = this.dialog.open(FriendFormComponent);
@@ -23,5 +28,9 @@ export class FriendsComponent {
     dialogRef.afterClosed().subscribe(result => {
       console.log(`Dialog result: ${result}`);
     });
+  }
+
+  ngOnInit(): void {
+    this.network = this.store.select(friendNetworkSelector);
   }
 }

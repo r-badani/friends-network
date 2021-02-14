@@ -4,6 +4,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FriendsModule } from './friends/friends.module';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreModule } from '@ngrx/store';
+import { friendsReducer } from './friends/state/friends.reducer';
 
 @NgModule({
   declarations: [
@@ -12,7 +15,14 @@ import { FriendsModule } from './friends/friends.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    FriendsModule
+    FriendsModule,
+    StoreModule.forRoot(friendsReducer, {
+      runtimeChecks: {
+        strictStateImmutability: false,
+        strictActionImmutability: false,
+      },
+    }),
+    EffectsModule.forRoot([])
   ],
   providers: [],
   bootstrap: [AppComponent]

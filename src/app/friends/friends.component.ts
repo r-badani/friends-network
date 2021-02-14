@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
 import { FriendFormComponent } from './friend-form/friend-form.component';
 import { FriendsService } from './services/friends.service';
@@ -19,6 +19,8 @@ export class FriendsComponent implements OnInit {
     return this.userFormArray?.controls as FormGroup[];
   }
 
+  onAdd = new EventEmitter();
+
   constructor(private service: FriendsService) {}
   ngOnInit(): void {
     this.initializeUserFormGroup();
@@ -26,7 +28,12 @@ export class FriendsComponent implements OnInit {
 
   initializeUserFormGroup() {
     this.group = new FormGroup({
-      users: new FormArray([FriendFormComponent.addForm()]),
+      users: new FormArray([
+        FriendFormComponent.addForm(),
+        FriendFormComponent.addForm(),
+        FriendFormComponent.addForm(),
+        FriendFormComponent.addForm(),
+      ]),
     });
   }
 
@@ -39,6 +46,7 @@ export class FriendsComponent implements OnInit {
   }
 
   onSubmit() {
-    this.service.processInputData(this.group.value.users)
+    //this.service.processInputData(this.group.value.users);
+    this.onAdd.emit();
   }
 }

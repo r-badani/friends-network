@@ -9,6 +9,7 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { NetworkChartModule } from './network-chart/network-chart.module';
+import { MatDialogModule } from "@angular/material/dialog";
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { NetworkChartModule } from './network-chart/network-chart.module';
     MatButtonModule,
     FriendsModule,
     NetworkChartModule,
+    MatDialogModule,
   ],
   providers: [
     FriendsService

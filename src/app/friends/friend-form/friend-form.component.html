@@ -12,13 +12,13 @@
           <app-base-form
             [baseForm]="userForm"
             [formIndex]="idx"
-            (removeFormEvt)="removeForm($event)"
+            (removeFormEvt)="removeFriendForm($event)"
           ></app-base-form>
         </article>
       </section>
     </mat-card-content>
     <mat-card-actions class="c-card__footer">
-      <button type="button" mat-flat-button (click)="appendForm()">
+      <button type="button" mat-flat-button (click)="appendFriendForm()">
         <mat-icon class="icon">add_circle_outline</mat-icon>
         Add another friend
       </button>

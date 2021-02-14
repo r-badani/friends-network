@@ -24,7 +24,11 @@ export class FriendFormComponent {
 
   onAdd = new EventEmitter();
 
-  constructor(private service: FriendsService, private store: Store<FriendsNetworkState>) {}
+  constructor(
+    private service: FriendsService,
+    private store: Store<FriendsNetworkState>
+  ) {}
+
   ngOnInit(): void {
     this.initializeUserFormGroup();
   }
@@ -32,24 +36,24 @@ export class FriendFormComponent {
   initializeUserFormGroup() {
     this.group = new FormGroup({
       users: new FormArray([
-        BaseFormComponent.addForm(),
-        BaseFormComponent.addForm(),
-        BaseFormComponent.addForm(),
-        BaseFormComponent.addForm(),
+        BaseFormComponent.addForm(), // Main user
+        BaseFormComponent.addForm(), // friend 1
+        BaseFormComponent.addForm(), // friend 2
+        BaseFormComponent.addForm(), // friend 3
       ]),
     });
   }
 
-  public appendForm(): void {
+  public appendFriendForm(): void {
     this.userFormArray?.push(BaseFormComponent.addForm());
   }
 
-  public removeForm(formIndex: number) {
+  public removeFriendForm(formIndex: number) {
     this.userFormArray?.removeAt(formIndex);
   }
 
   onSubmit() {
-    this.store.dispatch(addFriend({ friends: this.group.value.users}));
+    this.store.dispatch(addFriend({ friends: this.group.value.users }));
     this.group.reset();
     this.onAdd.emit();
   }

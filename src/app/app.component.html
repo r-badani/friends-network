@@ -1,1 +1,11 @@
-<app-friends></app-friends>
+<div *ngIf="obs$ | async as obs; else loading">
+  <app-friends></app-friends>
+</div>
+<ng-template #loading>
+  <div class="wrap">
+    <div class="loading">
+      <div class="bounceball"></div>
+      <div class="text">NOW LOADING</div>
+    </div>
+  </div>
+</ng-template>

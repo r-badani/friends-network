@@ -8,6 +8,7 @@ import { FriendsService } from './friends/services/friends.service';
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
+import { NetworkChartModule } from './network-chart/network-chart.module';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { MatButtonModule } from "@angular/material/button";
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    FriendsModule
+    FriendsModule,
+    NetworkChartModule,
   ],
   providers: [
     FriendsService

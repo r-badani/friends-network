@@ -8,6 +8,7 @@ import { NetworkChartComponent } from './network-chart.component';
   declarations: [NetworkChartComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [NetworkChartComponent],
 })
 export class NetworkChartModule { }

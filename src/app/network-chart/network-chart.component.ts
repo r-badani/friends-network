@@ -9,7 +9,7 @@ import {
   forceCenter,
 } from 'd3-force';
 import { line } from 'd3-shape';
-import { schemePaired } from 'd3-scale-chromatic';
+import { schemeTableau10 } from 'd3-scale-chromatic';
 import { FriendsService } from '../friends/services/friends.service';
 const d3 = {
   select,
@@ -20,7 +20,7 @@ const d3 = {
   forceCollide,
   forceCenter,
   scaleOrdinal,
-  schemePaired,
+  schemeTableau10,
   line,
 };
 
@@ -32,6 +32,7 @@ const d3 = {
 export class NetworkChartComponent implements OnInit {
   private _nodes: any;
   private _links: any;
+  private _colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
   private _svg: any;
   private _simulation: any;
@@ -78,6 +79,10 @@ export class NetworkChartComponent implements OnInit {
         [d.target.x, d.target.y],
       ]);
     });
+
+    this._image.attr('transform', (d: any) => {
+      return `translate(${d.x - 35}, ${d.y - 35})`;
+    });
   }
 
   private initializeSimulation() {
@@ -123,9 +128,38 @@ export class NetworkChartComponent implements OnInit {
       .append('circle')
       .attr('class', 'node')
       .attr('r', (d: any) => 40)
-      .attr('stroke', '#777')
-      .attr('stroke-width', 1)
-      .style('fill', (d: any) => 'blue');
+      .attr('stroke', '#fbae17')
+      .attr('stroke-width', 2)
+      .style('fill', (d: any) => this._colorScale(d.id));
+  }
+
+  private insertImage() {
+    this._image = this._svg
+      .selectAll('g')
+      .data(this._nodes)
+      .enter()
+      .append('g');
+    this._image
+      .append('image')
+      .attr('height', (d: any) => 70)
+      .attr('width', (d: any) => 70)
+      // .attr('height', (d: any) => nodeScale(d.weight))
+      // .attr('width', (d: any) => nodeScale(d.weight))
+      .attr('href', (d: any) => {
+        var imagePath = `https://avatars.dicebear.com/4.5/api/avataaars/${
+          d.name
+        }.svg?radius=50&mouth[]=smile&bold=1&fontSize=70&background=${encodeURIComponent(
+          '#f7fde6'
+        )}`;
+        return imagePath;
+      })
+      .attr('pointer-events', 'none');
+  }
+
+  private generateChart() {
+    this.drawLinks();
+    this.drawNodes();
+    this.insertImage();
   }
 
   constructor(private service: FriendsService) {}
@@ -138,7 +172,6 @@ export class NetworkChartComponent implements OnInit {
 
     this.drawChartSvg();
     this.initializeSimulation();
-    this.drawLinks();
-    this.drawNodes();
+    this.generateChart();
   }
 }

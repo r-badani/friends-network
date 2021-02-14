@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FriendsModule } from './friends/friends.module';
-import { NetworkChartModule } from './network-chart/network-chart.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +12,6 @@ import { NetworkChartModule } from './network-chart/network-chart.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NetworkChartModule,
     FriendsModule
   ],
   providers: [],

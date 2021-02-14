@@ -10,7 +10,7 @@ import {
 } from 'd3-force';
 import { line } from 'd3-shape';
 import { schemeTableau10 } from 'd3-scale-chromatic';
-import { FriendsService } from '../friends/services/friends.service';
+import { FriendsService } from '../../friends/services/friends.service';
 const d3 = {
   select,
   selectAll,

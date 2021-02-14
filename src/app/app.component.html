@@ -1,11 +1,13 @@
-<mat-toolbar color="primary" >
-  <div mat-card-avatar></div>
-  <h1>Friends Network</h1>
-  <button
-    mat-stroked-button
-  >
+<nav class="navbar">
+<mat-toolbar color="primary">
+  <div mat-card-avatar class="navbar-logo"></div>
+  <h1 class="mat-h1" style="color: white">Friends Network</h1>
+  <button mat-raised-button class="navbar-add__button">
     <mat-icon>group_add</mat-icon>
     Add Friends
   </button>
 </mat-toolbar>
-<app-friends></app-friends>
+</nav>
+<main>
+  <app-friends></app-friends>
+</main>

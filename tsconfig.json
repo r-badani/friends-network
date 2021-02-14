@@ -17,7 +17,8 @@
       "dom"
     ],
     "paths": {
-      "@components": ["src/app/components/index.ts"]
+      "@components": ["src/app/components/index.ts"],
+      "@data-mocks" : ["src/app/mocks/index.ts"]
     }
   },
   "angularCompilerOptions": {

@@ -29,4 +29,22 @@ export class FriendsEffects {
       )
     )
   );
+
+  loadFriends$ = createEffect(() =>
+    this.actions$.pipe(
+      ofType<ReturnType<typeof FriendActions.loadFriendNetwork>>(
+        FriendActions.loadFriendNetwork.type
+      ),
+      mergeMap((action) =>
+        this.friendDataService.loadSeedData().pipe(
+          map((network) => {
+            return FriendActions.loadFriendNetworkSuccess({ network });
+          }),
+          catchError((err: Error) => {
+            return of(FriendActions.loadFriendNetworkFailure({ error: err.message }));
+          })
+        )
+      )
+    )
+  );
 }

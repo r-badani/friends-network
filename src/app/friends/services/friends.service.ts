@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { Observable, of } from "rxjs";
 import { Link, Network, User } from "../models";
+import { FriendsNetworkMockData } from "@data-mocks";
 
 @Injectable()
 export class FriendsService {
@@ -8,10 +9,6 @@ export class FriendsService {
     users: [],
     links: []
   };
-
-  getNetwork(): Observable<Network> {
-    return of(this.network);
-  }
 
   private isExistingUser(user: User) {
     // user found if all the attributes i.e., name, age and weight match
@@ -86,6 +83,13 @@ export class FriendsService {
     });
 
     return of({...this.network});
+  }
+
+  loadSeedData(): Observable<Network> {
+    this.network = {...FriendsNetworkMockData};
+    return of({
+      ...this.network
+    });
   }
 
   constructor() {}

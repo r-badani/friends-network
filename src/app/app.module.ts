@@ -16,7 +16,7 @@ import { friendsReducer } from './friends/state/friends.reducer';
     BrowserModule,
     BrowserAnimationsModule,
     FriendsModule,
-    StoreModule.forRoot(friendsReducer, {
+    StoreModule.forRoot([], {
       runtimeChecks: {
         strictStateImmutability: false,
         strictActionImmutability: false,

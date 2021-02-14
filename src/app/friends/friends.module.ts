@@ -29,8 +29,8 @@ import { friendsReducer } from './state/friends.reducer';
     MatToolbarModule,
     NetworkChartModule,
     ReactiveFormsModule,
-    StoreModule.forFeature("friendsNetwork", friendsReducer),
-    EffectsModule.forFeature([FriendsEffects])
+    StoreModule.forFeature('friendsNetwork', friendsReducer),
+    EffectsModule.forFeature([FriendsEffects]),
   ],
   providers: [FriendsService],
   exports: [FriendsComponent],

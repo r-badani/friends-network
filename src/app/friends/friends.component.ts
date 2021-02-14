@@ -2,9 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from "@angular/material/dialog";
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
+import { map } from 'rxjs/operators';
 import { FriendFormComponent } from './friend-form/friend-form.component';
 import { Network } from './models';
 import { friendNetworkSelector, FriendsNetworkState } from './state/friends.reducer';
+import { loadFriendNetwork } from './state/friends.action';
 
 @Component({
   selector: 'app-friends',
@@ -31,6 +33,13 @@ export class FriendsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.network = this.store.select(friendNetworkSelector);
+    this.store.dispatch(loadFriendNetwork())
+    this.network = this.store.select(friendNetworkSelector).pipe(
+      map(
+        r => {
+          return {...r}
+        }
+      )
+    )
   }
 }

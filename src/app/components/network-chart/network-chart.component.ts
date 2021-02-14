@@ -33,6 +33,7 @@ const d3 = {
 export class NetworkChartComponent implements OnInit {
   private _nodes: any;
   private _links: Link[];
+  private _network: any;
   private _colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
   @Input()

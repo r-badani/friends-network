@@ -24,6 +24,14 @@
           placeholder="Name"
           formControlName="name"
         />
+        <mat-error>
+          <span *ngIf="nameField?.hasError('required')">
+            Name is a required field
+          </span>
+          <span *ngIf="nameField?.hasError('minlength')">
+            Min 3 character are required as Name value
+          </span>
+        </mat-error>
       </mat-form-field>
     </div>
     <div class="col">
@@ -48,6 +56,7 @@
           placeholder="Weight"
           formControlName="weight"
         />
+        <mat-error> Weight is required</mat-error>
       </mat-form-field>
     </div>
   </div>

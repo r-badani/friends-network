@@ -1,37 +1,13 @@
-<form [formGroup]="group" (ngSubmit)="onSubmit()">
-  <mat-card class="c-card">
-    <mat-card-header class="c-card__header">
-      <mat-card-title class="c-card__title">My Network</mat-card-title>
-    </mat-card-header>
-    <mat-card-content class="c-card__body">
-      <section
-        class="c-card__form"
-        *ngFor="let userForm of userFormGroup; let idx = index"
-      >
-        <article class="article">
-          <app-friend-form
-            [baseForm]="userForm"
-            [formIndex]="idx"
-            (removeFormEvt)="removeForm($event)"
-          ></app-friend-form>
-        </article>
-      </section>
-    </mat-card-content>
-    <mat-card-actions class="c-card__footer">
-      <button type="button" mat-flat-button (click)="appendForm()">
-        <mat-icon class="icon">add_circle_outline</mat-icon>
-        Add another friend
-      </button>
-
-      <div class="spacer"></div>
-      <button mat-stroked-button>Cancel</button>
-      <button
-        mat-raised-button
-        color="primary"
-        type="submit"
-      >
-        Submit
-      </button>
-    </mat-card-actions>
-  </mat-card>
-</form>
+<nav class="navbar">
+  <mat-toolbar color="primary">
+    <div mat-card-avatar class="navbar-logo"></div>
+    <h1 class="mat-h1" style="color: white">Friends Network</h1>
+    <button mat-raised-button class="navbar-add__button" (click)="openDialog()">
+      <mat-icon>group_add</mat-icon>
+      Add Friends
+    </button>
+  </mat-toolbar>
+  </nav>
+  <main>
+    <!-- <app-network-chart></app-network-chart> -->
+  </main>

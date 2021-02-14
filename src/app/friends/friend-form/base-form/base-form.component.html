@@ -1,0 +1,54 @@
+<form class="wrapper" [formGroup]="baseForm">
+  <div *ngIf="formIndex === 0; then thenBlock; else elseBlock"></div>
+  <ng-template #thenBlock>
+    <h3 class="wrapper__head-title">My details</h3>
+  </ng-template>
+  <ng-template #elseBlock>
+    <h3 class="wrapper__head-title">Friend #{{ formIndex }}</h3>
+    <button
+      *ngIf="formIndex > 1"
+      type="button"
+      class="wrapper__head-closeBtn"
+      mat-icon-button
+      (click)="removeForm(formIndex)"
+    >
+      <mat-icon class="icon">close</mat-icon>
+    </button>
+  </ng-template>
+  <div class="row">
+    <div class="col">
+      <mat-form-field>
+        <input
+          matInput
+          [name]="'name-' + formIndex"
+          placeholder="Name"
+          formControlName="name"
+        />
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <input
+          matInput
+          [name]="'age-' + formIndex"
+          type="number"
+          placeholder="Age"
+          formControlName="age"
+        />
+        <span matSuffix>Years</span>
+        <mat-error> Age is required</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="col">
+      <mat-form-field>
+        <input
+          matInput
+          [name]="'weight-' + formIndex"
+          type="number"
+          placeholder="Weight"
+          formControlName="weight"
+        />
+      </mat-form-field>
+    </div>
+  </div>
+</form>

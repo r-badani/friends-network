@@ -1,32 +1,52 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, OnInit } from '@angular/core';
+import { FormGroup, FormArray } from '@angular/forms';
+import { BaseFormComponent } from './base-form/base-form.component';
+import { FriendsService } from './../services/friends.service';
 
 @Component({
   selector: 'app-friend-form',
   templateUrl: './friend-form.component.html',
-  styleUrls: ['./friend-form.component.scss']
+  styleUrls: ['./friend-form.component.scss'],
 })
 export class FriendFormComponent {
-  @Input()
-  public baseForm!: FormGroup;
+  public group: FormGroup = new FormGroup({});
 
-  @Input()
-  public formIndex!: number;
+  get userFormArray(): FormArray {
+    return this.group?.get('users') as FormArray;
+  }
 
-  @Output()
-  public removeFormEvt: EventEmitter<number> = new EventEmitter<number>();
+  get userFormGroup(): FormGroup[] {
+    return this.userFormArray?.controls as FormGroup[];
+  }
 
-  static addForm(): FormGroup {
-    return new FormGroup({
-      name: new FormControl(''),
-      age: new FormControl(''),
-      weight: new FormControl(''),
+  onAdd = new EventEmitter();
+
+  constructor(private service: FriendsService) {}
+  ngOnInit(): void {
+    this.initializeUserFormGroup();
+  }
+
+  initializeUserFormGroup() {
+    this.group = new FormGroup({
+      users: new FormArray([
+        BaseFormComponent.addForm(),
+        BaseFormComponent.addForm(),
+        BaseFormComponent.addForm(),
+        BaseFormComponent.addForm(),
+      ]),
     });
   }
 
-  public removeForm(formIndex: number): void {
-    this.removeFormEvt.next(formIndex);
+  public appendForm(): void {
+    this.userFormArray?.push(BaseFormComponent.addForm());
   }
-  constructor() {}
 
+  public removeForm(formIndex: number) {
+    this.userFormArray?.removeAt(formIndex);
+  }
+
+  onSubmit() {
+    //this.service.processInputData(this.group.value.users);
+    this.onAdd.emit();
+  }
 }

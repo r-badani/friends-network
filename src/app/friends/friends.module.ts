@@ -8,10 +8,12 @@ import { MatInputModule } from "@angular/material/input";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { FriendFormComponent } from './friend-form/friend-form.component';
 import { FriendsComponent } from './friends.component';
-
+import { BaseFormComponent } from './friend-form/base-form/base-form.component';
+import { MatDialogModule } from "@angular/material/dialog";
+import { FriendsService } from './services/friends.service';
 
 @NgModule({
-  declarations: [FriendsComponent, FriendFormComponent],
+  declarations: [FriendsComponent, FriendFormComponent, BaseFormComponent],
   imports: [
     CommonModule,
     MatButtonModule,
@@ -19,8 +21,10 @@ import { FriendsComponent } from './friends.component';
     MatIconModule,
     MatInputModule,
     MatToolbarModule,
+    MatDialogModule,
     ReactiveFormsModule,
   ],
+  providers: [FriendsService],
   exports: [FriendsComponent],
 })
 export class FriendsModule { }

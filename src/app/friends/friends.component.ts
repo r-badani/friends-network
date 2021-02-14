@@ -1,52 +1,27 @@
-import { Component, EventEmitter, OnInit } from '@angular/core';
-import { FormGroup, FormArray } from '@angular/forms';
+import { Component } from '@angular/core';
+import { MatDialog } from "@angular/material/dialog";
 import { FriendFormComponent } from './friend-form/friend-form.component';
-import { FriendsService } from './services/friends.service';
 
 @Component({
   selector: 'app-friends',
   templateUrl: './friends.component.html',
   styleUrls: ['./friends.component.scss'],
 })
-export class FriendsComponent implements OnInit {
-  public group: FormGroup = new FormGroup({});
+export class FriendsComponent {
+  title = 'friends-network';
 
-  get userFormArray(): FormArray {
-    return this.group?.get('users') as FormArray;
-  }
+  constructor(public dialog: MatDialog) {}
 
-  get userFormGroup(): FormGroup[] {
-    return this.userFormArray?.controls as FormGroup[];
-  }
+  openDialog() {
+    const dialogRef = this.dialog.open(FriendFormComponent);
+    dialogRef.updateSize("80%");
 
-  onAdd = new EventEmitter();
-
-  constructor(private service: FriendsService) {}
-  ngOnInit(): void {
-    this.initializeUserFormGroup();
-  }
-
-  initializeUserFormGroup() {
-    this.group = new FormGroup({
-      users: new FormArray([
-        FriendFormComponent.addForm(),
-        FriendFormComponent.addForm(),
-        FriendFormComponent.addForm(),
-        FriendFormComponent.addForm(),
-      ]),
+    const sub = dialogRef.componentInstance.onAdd.subscribe(() => {
+      dialogRef.close()
     });
-  }
 
-  public appendForm(): void {
-    this.userFormArray?.push(FriendFormComponent.addForm());
-  }
-
-  public removeForm(formIndex: number) {
-    this.userFormArray?.removeAt(formIndex);
-  }
-
-  onSubmit() {
-    //this.service.processInputData(this.group.value.users);
-    this.onAdd.emit();
+    dialogRef.afterClosed().subscribe(result => {
+      console.log(`Dialog result: ${result}`);
+    });
   }
 }

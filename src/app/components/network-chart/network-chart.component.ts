@@ -138,8 +138,8 @@ export class NetworkChartComponent implements OnInit {
       .force(
         'center',
         d3.forceCenter(
-          (this._options.width - this._options.margin) / 2,
-          this._options.height / 2
+          (this._options.width) / 2,
+          (this._options.height - this._options.margin) / 2
         )
       )
       .on('tick', () => this.onTick());

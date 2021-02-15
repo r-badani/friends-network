@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <mat-toolbar color="primary">
+  <mat-toolbar color="primary" class="navbar-primary">
     <div mat-card-avatar class="navbar-logo"></div>
     <h1 class="mat-h1" style="color: white">Friends Network</h1>
     <button mat-raised-button class="navbar-add__button" (click)="openDialog()">
@@ -7,9 +7,16 @@
       Add Friends
     </button>
   </mat-toolbar>
-  </nav>
+</nav>
+
+<div *ngIf="network | async as network">
+  <header class="page-header">
+    <span> Total Users in the Network: # {{ network.users.length }}</span>
+  </header>
   <main>
-    <div *ngIf="network | async as network">
-      <app-network-chart [nodes]="network.users" [links]="network.links"></app-network-chart>
-    </div>
+    <app-network-chart
+      [nodes]="network.users"
+      [links]="network.links"
+    ></app-network-chart>
   </main>
+</div>

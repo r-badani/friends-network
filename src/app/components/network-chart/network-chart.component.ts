@@ -33,7 +33,6 @@ const d3 = {
 export class NetworkChartComponent implements OnInit {
   private _nodes: any;
   private _links: Link[];
-  private _network: any;
   private _colorScale = d3.scaleOrdinal(d3.schemeTableau10);
 
   @Input()
@@ -54,6 +53,7 @@ export class NetworkChartComponent implements OnInit {
     return this._links;
   }
 
+  private _colorYellow = "#fbae17";
   private _svg: any;
   private _simulation: any;
   private _currentNode: any = null;
@@ -151,7 +151,7 @@ export class NetworkChartComponent implements OnInit {
       .data(this._links)
       .enter()
       .append('path')
-      .attr('stroke', '#fbae17')
+      .attr('stroke', this._colorYellow)
       .attr('stroke-width', 1)
       .attr('fill', 'none');
   }
@@ -165,7 +165,7 @@ export class NetworkChartComponent implements OnInit {
       .append('circle')
       .attr('class', 'node')
       .attr('r', (d: any) => 40)
-      .attr('stroke', '#fbae17')
+      .attr('stroke', this._colorYellow)
       .attr('stroke-width', 1)
       .style('fill', (d: any) => this._colorScale(d.id))
       .on('mouseover', this.onMouseOver)
@@ -218,7 +218,7 @@ export class NetworkChartComponent implements OnInit {
       .attr('width', 175)
       .attr('height', 50)
       .attr('fill', 'white')
-      .attr('stroke', '#fbae17')
+      .attr('stroke', this._colorYellow)
       .attr('stroke-width', 2)
       .attr('rx', 5);
 

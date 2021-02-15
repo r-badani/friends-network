@@ -10,6 +10,7 @@ describe('FriendFormComponent', () => {
   let component: FriendFormComponent;
   let fixture: ComponentFixture<FriendFormComponent>;
   let mockStore: MockStore;
+  const matDialog =
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -62,4 +63,15 @@ describe('FriendFormComponent', () => {
 
     expect(submitEl.disabled).toBeTruthy();
   });
+
+  it('should dispatch addFriend action on submit click', () => {
+    spyOn(mockStore, 'dispatch');
+
+    component.onSubmit()
+    fixture.detectChanges()
+
+    // TODO test for complete action with prop object
+    expect(mockStore.dispatch).toHaveBeenCalled();
+
+  })
 });

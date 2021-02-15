@@ -52,10 +52,10 @@ export class FriendFormComponent {
 
   onSubmit() {
     this.store.dispatch(addFriend({ friends: this.group.value.users }));
+    this.closeForm.emit();
   }
 
   onCancel() {
-    this.group.reset();
     this.closeForm.emit();
   }
 }

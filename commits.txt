@@ -1,0 +1,523 @@
+commit ce5f4bb78cc8ff68492c5c24f0445966136dda2d
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 17:17:17 2021 -0500
+
+    refactor: clean up
+
+commit 5b47d9e20c01908e00d73ff855442f4d6d0c3e17
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 17:01:32 2021 -0500
+
+    docs: site link
+
+commit 9cca581de66ca777a1ffed36127c99741765f895
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:59:15 2021 -0500
+
+    docs: demo
+
+commit 4daff7486c7e69d0eb1d2a7705c8764b555881b1
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:50:44 2021 -0500
+
+    docs: cypress
+
+commit b08b7c92929371128cc12dd40cb48900f7556f03
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:45:03 2021 -0500
+
+    docs: cypress test change
+
+commit 4ba676426045e8e2a4143dee7118ba140a455648
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:41:31 2021 -0500
+
+    fix: typo
+
+commit 42166b739a361ef4d4ee746b7b5b5fbaa1eafbd1
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:40:21 2021 -0500
+
+    docs: unit tests
+
+commit 15384e944b7d7ff5f595b14e21e542a450203e5a
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:31:22 2021 -0500
+
+    docs: ngrx
+
+commit cedfc6584997b04acc9b280cde7271f9dc02718a
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:22:17 2021 -0500
+
+    docs: adding initial documentation
+
+commit e97a5ef8cb55d2c20962563f1939bc6d88496fea
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:10:20 2021 -0500
+
+    docs:  app structure
+
+commit 9754ad03ce75d0d6a12ea6985c6a1c4490c70787
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:08:11 2021 -0500
+
+    docs: documentation assets
+
+commit c2dd50fb371ada2c3f345a830e6ff7d1431a8485
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:04:06 2021 -0500
+
+    docs: adding design assets
+
+commit 9af49ee932c36344f615e10633a68b7694a2e1ba
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:02:11 2021 -0500
+
+    docs: adding design assets
+
+commit 879e21415f3b770a712efcb5f32a3ec26d40a376
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 16:01:07 2021 -0500
+
+    docs: adding design assets
+
+commit 7d6300475a3eb777171b771164059040ca482ffd
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:56:03 2021 -0500
+
+    docs: adding design assets
+
+commit 589afe7609df19059275d524052432c34de7bf28
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:53:42 2021 -0500
+
+    docs: adding desigh assets for documentadin
+
+commit 69e52836a121e2c0264bb10e61bbae4107ba1bb2
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:33:17 2021 -0500
+
+    bug(chart): update chart data on link change
+
+commit 653398133fdabbd80b57c255e53d373346fa5749
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:30:33 2021 -0500
+
+    bug(chart): update chart data on link change
+
+commit 9ed3ebb308a4eacc7789664397a2b0e394058cdd
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:22:30 2021 -0500
+
+    bug: scrollbar bug on windows
+
+commit 90412d55a88fd51f79936eeafa36a7abe7e6c3e3
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:10:36 2021 -0500
+
+    refactor: positioning text to end
+
+commit c8e30be8f52d46d9788fbfc17703e7d9695fc065
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:04:39 2021 -0500
+
+    refactor: code clean up
+
+commit fe958d197b4fc3fee09e9b2b2632a068fe367365
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 15:00:00 2021 -0500
+
+    refactor: code clean up
+
+commit fa8b8e04e8e130d884e254870eafb0d3a67de58f
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 14:48:40 2021 -0500
+
+    refactor: removing debugger and code comment
+
+commit 54298f7fcbf7a0883b9733219da713c3ff424b46
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 14:43:46 2021 -0500
+
+    refactor: code clean up
+
+commit 2135c28fbe41d63a43756cf4039997505fc42b5b
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 14:41:38 2021 -0500
+
+    refactor: code clean up
+
+commit 4705c6bdb1beeffe78d881029f4924b106efd176
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 14:39:17 2021 -0500
+
+    bug: unnecessary scrollbar
+
+commit 6f3f7f39d608ec4bbb2766d713b135c39b94a2d0
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 14:30:48 2021 -0500
+
+    bug: onCancel calling on submit
+
+commit 7f67a52a3f36eb5ccbd0ea3b47d676f7fbf6eb46
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 14:26:39 2021 -0500
+
+    refactor: moving common code to cypress commands and clean up
+
+commit 03e83b4f6dfac89bdb64908a2be34d07dec7fc04
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 14:03:41 2021 -0500
+
+    feat(e2e): adding additional cypress test for ngrx store
+
+commit 153a66dd2dfd75fff79b7ea70663de6eb73b33d7
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 12:59:19 2021 -0500
+
+    feat(e2e): replacing protector with cypress
+
+    adding basic testing for e2e
+
+commit 611feb812e8cc55372400e2fb297091d796b224b
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 11:45:49 2021 -0500
+
+    reverting cypress
+
+commit ee4abf027cdf08916218137de9385c4b1d01be93
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 11:32:04 2021 -0500
+
+    feat(e2e): removing protector and adding cypress
+
+commit 5e96f0538c6653278771431c5f3cbede06cf9544
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 11:23:28 2021 -0500
+
+    tweak: text change
+
+commit 4cf53d1e4f9fc07092a4fe5a9212004ff300210e
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 00:08:07 2021 -0500
+
+    tweak: text change
+
+commit 84d3d9858f5cc53be48a8f89d3d3ef9581173f68
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 00:05:37 2021 -0500
+
+    refactor(chart): removing chart spec in favor of e2e test
+
+commit bc356cd9cce7c5bd5a03bde43ff7719f68ea98c2
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Mon Feb 15 00:04:24 2021 -0500
+
+    tweak: adding missing weight unit
+
+commit 2a53dede69dc22773fe7fcaf36e595c2e8ef604b
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 23:47:32 2021 -0500
+
+    tweak: formating
+
+commit 0ccaa2b8febb3d3a28c6f630744a63a504947477
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 23:46:25 2021 -0500
+
+    bug(form): clear form on submit
+
+commit 9ac8f3e6fd3ae38c590fb88d316f2889facdb549
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 23:41:35 2021 -0500
+
+    tweak: some text change
+
+commit 3aadcec0249f0d28cd2639e284ee221ede898f25
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 23:37:15 2021 -0500
+
+    feat(form): adding ability to cancel form
+
+commit 9594cfececc515e03b4136f5d785d588505c8cfe
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 23:30:54 2021 -0500
+
+    refactor: formating
+
+commit 18c4ce4d0011f600466d0beedc929ad8ce2cbe2a
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 23:19:59 2021 -0500
+
+    tweak: adding close button to form
+
+commit b5f72ba86336af642620de745193d17fb82e3e43
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 23:14:18 2021 -0500
+
+    refactor: adding some secondary data
+
+commit 6d909163994bf5a844b867bef04002513938546e
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 22:06:56 2021 -0500
+
+    feat: adding favicon
+
+commit 5c73d860d7c68c5d6798f6003bd3d4a088ed14df
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 22:04:55 2021 -0500
+
+    feat(test): adding unit test for service,chart and friend component
+
+commit 7dfe4bbe8f3e561fa0b2e5c17e554de46f51a2dc
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 19:39:24 2021 -0500
+
+    refactor(test): added test to check for store dispatch
+
+commit 7bda8d82bd8896b2c3c197e54e9b67d0f25130b0
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 19:29:01 2021 -0500
+
+    feat(test): adding unit test for friend form component
+
+commit 76f1b699e2424616b300503ca93026615b7fac1a
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 19:03:37 2021 -0500
+
+    feat(test): base form unit tests
+
+commit 8bcdb38558a007cb4646ea279a9e68c9ca065a39
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 18:06:38 2021 -0500
+
+    refactor: adding for validation
+
+commit 640edc4733659ae0afe0f50943416dd22bdf71a4
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 17:43:37 2021 -0500
+
+    refactor: code clean up and correction
+
+commit 59f5df5409cdaea1a42133810f98069bd70805fd
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 17:32:36 2021 -0500
+
+    refactor: code clean up and touch up
+
+commit 028ffc0615b48e66c1f79a1c8d78e9b4cf459685
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 17:20:41 2021 -0500
+
+    feat: adding loading screen with delay of 3 seconds
+
+commit 7cc959ccc56f16a1d00eacd77ccf1d640ca73552
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 17:12:09 2021 -0500
+
+    feat: adding mock data and loading seed data for the app
+
+commit d529293c4d22344f58ee0a1daa3ef77d0923ab80
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 15:32:05 2021 -0500
+
+    refactor: moving initial data to mock files
+
+commit fa942a9c83d36256a9be878be6225aeec07c56d2
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 15:29:04 2021 -0500
+
+    feat(ngrx): connecting form, chart to state
+
+commit 87d251a73ae11c27ce801a03d14efef59e2e4a4c
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 14:13:41 2021 -0500
+
+    feat(friend): adding initial actions
+
+commit 97b7d8a02fd0f5bac781981721507b9f7b2c3a9f
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 14:02:05 2021 -0500
+
+    feat(lib): adding ngrx store and effects
+
+commit d15880dee2b04d4aa622be6d6b7971bed6fe76d5
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 13:09:15 2021 -0500
+
+    refactor: re-organising the code
+
+commit 3d4065492e88cfd801a0345d3a181794dd90892a
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 12:07:31 2021 -0500
+
+    refactor: re-organised code
+
+commit 8d3b88f6dc01cd201ae0d1840fdfb938b92dd2e3
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 02:05:02 2021 -0500
+
+    refactor(friend-form): moving it in a dailog
+
+commit d3bbaf3b4714c97a03e0aefaca7ffa77e13c1a69
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 01:23:52 2021 -0500
+
+    feat(chart): adding hover cart to show more user information
+
+commit 4aee4dc58524eb87b49da0696d5d25ec3ce0b7bd
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sun Feb 14 00:52:59 2021 -0500
+
+    feat(chart): adding images to the node to give it more human feel
+
+commit fdbe299f8dc26fc50ecee4ba00dd04bc8f89d192
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 23:53:28 2021 -0500
+
+    feat(chart): nodes and links are added, simulation is working
+
+commit b227bb7f07a727040ca8114d3ac37ff2b85822e1
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 22:36:10 2021 -0500
+
+    feat(chart): initial commit
+
+commit 73241c2b8be87f360908062f7f73977f292396de
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 22:18:28 2021 -0500
+
+    feat(chart): adding chart module, lets do this
+
+commit 742e9ecc6a027700ae73f8c4e9dc2f510625eb1c
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 21:58:43 2021 -0500
+
+    refactor: updating body style to give it some character
+
+commit 7e1eaf7984df5feb2a4a64db29dad4b9c5d6b961
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 21:44:41 2021 -0500
+
+    refactor(nav-bar): adding logo, nav style and top level add button
+
+commit 92dd6049d502e385ad7716ba2b65d488110f2f33
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 21:11:58 2021 -0500
+
+    feat(main-page): building landing page
+
+commit 9de7f631cdf7f59df8bf2ebbb4431bb7dd5633a9
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 18:04:56 2021 -0500
+
+    feat(service): added Friends service to manage CRUD
+
+commit eaea5e9269d98154aa3493af4807f3ea34cac576
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 16:28:48 2021 -0500
+
+    refactor: style change for better look and feel
+
+commit 5ae9249d1839bebf3c6d9162de241e8ce0a55171
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 16:07:42 2021 -0500
+
+    refactor: adding style SASSing it up
+
+commit ab1a48dd7b717867f561a652601e738b13a4b56c
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 15:29:42 2021 -0500
+
+    tweak: adding title and subTitle for friend component
+
+commit 8dcbc75d80385f01818138587bc75e760fccc926
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 15:26:00 2021 -0500
+
+    feat(friendForm): conditional header based on form index
+
+commit 0de649c44684c2cbabbb7a3c252874549c1056fa
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 15:14:50 2021 -0500
+
+    refactor: remove action only if we have more then 2 form, min form 2
+
+commit c12b6f8ccb58ee8b6d75ecc77320d85ece991a69
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 15:12:43 2021 -0500
+
+    feat(friend): ability to remove form as needed
+
+commit fed5ab5257707508f0fe4b2d300f3d76fa1129de
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 15:06:23 2021 -0500
+
+    feat(friend): ability to add multiple form based on friend form
+
+commit 9abe9ffd5e93572e852974a9aec3e399a065a8e5
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 15:03:59 2021 -0500
+
+    tweak: adding name attribute as we will have multiple form on same page
+
+commit bb0474acb24cffa5d9f07f63e34006b18d2fff57
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 14:59:54 2021 -0500
+
+    refactor: get form group from container component
+
+commit c2e96b5f0c34c47975bac7475fffa64f0b0a7b36
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 14:31:26 2021 -0500
+
+    tweak: adding form group to main from
+
+commit 05f65c0d44b529f1ae154860f82480aee7788fab
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 14:30:26 2021 -0500
+
+    feat(form): injecting base form via formArray
+
+commit 67627a473717d32de47c86489a104b21efa1008a
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 14:23:45 2021 -0500
+
+    refactor(friend): seperating presentational component and container component
+
+commit 7c5c00aa270e00d6ddaa184808c50b03749fe660
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 14:07:35 2021 -0500
+
+    feat(form): adding basic form input for name, age, weight and required mat modules
+
+commit bad1925fbb515f02a7dd7806c69bb00fe68a990a
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 13:20:12 2021 -0500
+
+    feat(form): added new friend form
+
+commit e728d1ebdbeb58ac2d85c736d676ac41fcab2912
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 13:11:38 2021 -0500
+
+    chore: importing friends module to app module
+
+commit 7cdfbbddd82120fe2fa5b02f4c6b7085a35de5cc
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 12:57:50 2021 -0500
+
+    feat(friend): adding friends feature module and base component
+
+commit 2f631cb952e2c9835b0fc94126cb5ac7f439f9eb
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 12:47:33 2021 -0500
+
+    feat(lib): added angular material with purple-green theme
+
+commit 00ebe2bb9e218a4e73360c6f0c58e5b1354e6dfb
+Author: Rushabh Badani <rjbadani@gmail.com>
+Date:   Sat Feb 13 12:36:01 2021 -0500
+
+    initial commit

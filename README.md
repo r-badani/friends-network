@@ -1,4 +1,4 @@
-# FriendsNetwork
+# Friends Network
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
@@ -12,14 +12,20 @@ Based on the requirement of User being able to add name, friends, age and weight
 
 App will hold one feature module called `Friends` and a D3 component that will help us visualize the relationship between friends called `network-chart`
 
-## Use cases
+## Ngrx
 
-Here are some of the usecase a user may come across
+App is using ngrx for state management, here are actions that the ngrx store handles
 
-- `New` user is adding information for the first time with new friends
-- `New` user is adding friends that already exists in the network
-- `Existing` user is adding information about friends that are new to the Network
-- `Existing` user is adding information about friends that are already in the Network
+![App structure](https://github.com/r-badani/friends-network/blob/main/docs/assets/ngrxActions.gif)
+- [Friend-Network] load friend records
+- [Friend-Network] load friend records successful
+- [Friend-Network] load friend records unsuccessful
+- [Add-friend] Add friend entry
+- [Add-friend] Adding friends successful
+- [Add-friend] Adding friends unsuccessful
+
+## DEMO
+
 
 ## Development server
 

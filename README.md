@@ -8,6 +8,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![Basic Demo](https://github.com/r-badani/friends-network/blob/main/docs/assets/basicDemo.gif)
 
+*colors on video may appear dull, please visit [site here](https://friends-network.vercel.app/) 
+
 ## App Architecture
 
 Based on the requirement of User being able to add name, friends, age and weight to the application I came up with the following structure

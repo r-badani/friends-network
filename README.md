@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ![landingPage](https://github.com/r-badani/friends-network/blob/main/docs/assets/landingPageWithTooltip.jpg)
 
+## DEMO
+
+![Basic Demo](https://github.com/r-badani/friends-network/blob/main/docs/assets/basicDemo.gif)
+
 ## App Architecture
 
 Based on the requirement of User being able to add name, friends, age and weight to the application I came up with the following structure
@@ -44,10 +48,6 @@ For the application based on available time I have added few unit tests that tes
 I am using Cypress to do the e2e tests, you can run is locally using `ng e2e`
 
 ![E2E Tests](https://github.com/r-badani/friends-network/blob/main/docs/assets/cypressE2E.gif)
-
-
-
-## DEMO
 
 
 ## Development server

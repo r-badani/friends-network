@@ -8,6 +8,7 @@
     <button
       *ngIf="formIndex > 1"
       type="button"
+      [name]="'removeForm-' + formIndex"
       class="wrapper__head-closeBtn"
       mat-icon-button
       (click)="removeForm(formIndex)"

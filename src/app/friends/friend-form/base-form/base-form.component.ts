@@ -39,7 +39,7 @@ export class BaseFormComponent {
   }
 
   public removeForm(formIndex: number): void {
-    this.removeFormEvt.next(formIndex);
+    this.removeFormEvt.emit(formIndex);
   }
   constructor() {}
 }

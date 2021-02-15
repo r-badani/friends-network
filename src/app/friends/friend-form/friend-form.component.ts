@@ -1,7 +1,6 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
 import { FormGroup, FormArray } from '@angular/forms';
 import { BaseFormComponent } from './base-form/base-form.component';
-import { FriendsService } from './../services/friends.service';
 import { FriendsNetworkState } from '../state/friends.reducer';
 import { Store } from '@ngrx/store';
 import { addFriend } from '../state/friends.action';
@@ -25,7 +24,6 @@ export class FriendFormComponent {
   onAdd = new EventEmitter();
 
   constructor(
-    private service: FriendsService,
     private store: Store<FriendsNetworkState>
   ) {}
 

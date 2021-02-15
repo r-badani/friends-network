@@ -12,17 +12,30 @@ Based on the requirement of User being able to add name, friends, age and weight
 
 App will hold one feature module called `Friends` and a D3 component that will help us visualize the relationship between friends called `network-chart`
 
+`Network-chart` each node represents a user and links between the nodes represents the relationship between them which in 'friends'
+
+For the look and feel we are adding avatar to the nodes to bring that human touch and on mouse over we provide more information of the user i.e age, weight and name. 
+
 ## Ngrx
 
 App is using ngrx for state management, here are actions that the ngrx store handles
 
 ![App structure](https://github.com/r-badani/friends-network/blob/main/docs/assets/ngrxActions.gif)
+
 - [Friend-Network] load friend records
 - [Friend-Network] load friend records successful
 - [Friend-Network] load friend records unsuccessful
 - [Add-friend] Add friend entry
 - [Add-friend] Adding friends successful
 - [Add-friend] Adding friends unsuccessful
+
+In the application when a user arrives to fill out the form, we simply add the friends to the user collection. The relation ship are stored in the links collection using the users id attribute.
+
+## Unit tests
+
+For the application based on available time I have added few unit tests that test the core features and you can run them using `ng test`
+
+![Unit test](https://github.com/r-badani/friends-network/blob/main/docs/assets/unitTest.png)
 
 ## DEMO
 

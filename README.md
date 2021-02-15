@@ -2,6 +2,13 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.1.
 
+## App Architecture
+
+Based on the requirement of User being able to add name, friends, age and weight to the application I came up with the following structure
+
+![App structure](https://github.com/r-badani/friends-network/blob/main/docs/assets/AppStructure.jpg)
+
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

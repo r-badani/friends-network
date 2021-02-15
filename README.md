@@ -39,6 +39,14 @@ For the application based on available time I have added few unit tests that tes
 
 ![Unit test](https://github.com/r-badani/friends-network/blob/main/docs/assets/unitTests.png)
 
+## E2E with Cypress
+
+I am using Cypress to do the e2e tests, you can run is locally using `ng e2e`
+
+![E2E Tests](https://github.com/r-badani/friends-network/blob/main/docs/assets/cypressE2E.gif)
+
+
+
 ## DEMO
 
 

@@ -1,4 +1,4 @@
-<form [formGroup]="group" (ngSubmit)="onSubmit()">
+<form [formGroup]="group" (ngSubmit)="onSubmit()" novalidate>
   <mat-card class="c-card">
     <mat-card-header class="c-card__header">
       <mat-card-title class="c-card__title">My Network</mat-card-title>
@@ -33,7 +33,7 @@
       </button>
 
       <div class="spacer"></div>
-      <button mat-stroked-button (click)="onCancel()">Cancel</button>
+      <button mat-stroked-button (click)="onCancel()" type="button">Cancel</button>
       <button
         mat-raised-button
         color="primary"

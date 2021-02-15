@@ -35,7 +35,7 @@ In the application when a user arrives to fill out the form, we simply add the f
 
 For the application based on available time I have added few unit tests that test the core features and you can run them using `ng test`
 
-![Unit test](https://github.com/r-badani/friends-network/blob/main/docs/assets/unitTest.png)
+![Unit test](https://github.com/r-badani/friends-network/blob/main/docs/assets/unitTests.png)
 
 ## DEMO
 

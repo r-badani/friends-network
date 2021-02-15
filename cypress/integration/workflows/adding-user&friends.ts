@@ -1,9 +1,9 @@
 export class AddingUsers {
   static users = [
-    { name: 'Michael Scott', age: 30, weight: 140 },
-    { name: 'Dwight Schrute', age: 30, weight: 110 },
-    { name: 'Jim Halpert', age: 20, weight: 140 },
-    {name: 'Pam Beesly', age: 20, weight: 110 },
+    { name: 'Michael Scott 2', age: 30, weight: 140 },
+    { name: 'Dwight Schrute 2', age: 30, weight: 110 },
+    { name: 'Jim Halpert 2', age: 20, weight: 140 },
+    {name: 'Pam Beesly 2', age: 20, weight: 110 },
   ];
 
   static addFriends() {

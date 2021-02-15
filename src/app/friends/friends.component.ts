@@ -24,7 +24,13 @@ export class FriendsComponent implements OnInit, OnDestroy {
   constructor(
     public dialog: MatDialog,
     private store: Store<FriendsNetworkState>
-  ) {}
+  ) {
+    // @ts-ignore
+    if(window.Cypress){
+      // @ts-ignore
+      window.store = this.store;
+  }
+  }
 
   openDialog() {
     const dialogRef = this.dialog.open(FriendFormComponent, {

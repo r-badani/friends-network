@@ -7,6 +7,7 @@ import { FriendsModule } from './friends/friends.module';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
 import { friendsReducer } from './friends/state/friends.reducer';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,6 +22,7 @@ import { friendsReducer } from './friends/state/friends.reducer';
         strictActionImmutability: false,
       },
     }),
+    StoreDevtoolsModule.instrument(),
     EffectsModule.forRoot([]),
   ],
   providers: [],

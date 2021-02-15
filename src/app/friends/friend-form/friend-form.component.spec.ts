@@ -4,6 +4,7 @@ import { FriendFormComponent } from './friend-form.component';
 import { provideMockStore, MockStore } from '@ngrx/store/testing';
 import { addFriend } from '../state/friends.action';
 import { FriendsNetworkState } from './../state/friends.reducer';
+import { FormGroup } from '@angular/forms';
 
 describe('FriendFormComponent', () => {
   let component: FriendFormComponent;
@@ -28,24 +29,37 @@ describe('FriendFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  xit('should show name, age and weight input field', () => {
-    const formIndex = 0;
+  it('should add new friend form when Add one more friend button ', () => {
+    const currentFormCount = component.userFormGroup.length;
+
+    const addMoreFormBtn = fixture.nativeElement.querySelector(
+      'button[name=addform]'
+    );
+    addMoreFormBtn.click();
 
     fixture.detectChanges();
-    console.log("🚀 ~ file: friend-form.component.spec.ts ~ line 50 ~ it ~ fixture.nativeElement", fixture.nativeElement)
-    const nameField = fixture.nativeElement.querySelector(
-      `input[name=name-${formIndex}]`
-    );
-    const ageField = fixture.nativeElement.querySelector(
-      `input[name=age-${formIndex}]`
-    );
-    const weightField = fixture.nativeElement.querySelector(
-      `input[name=weight-${formIndex}]`
-    );
+    const newCount = component.userFormGroup.length;
 
-    expect(nameField).toBeTruthy();
-    expect(ageField).toBeTruthy();
-    expect(weightField).toBeTruthy();
+    expect(currentFormCount).toBeLessThan(newCount);
   });
 
+  it('should add new friend form when Add one more friend button ', () => {
+    const currentFormCount = component.userFormGroup.length;
+    component.removeFriendForm(3);
+
+    fixture.detectChanges();
+    const newCount = component.userFormGroup.length;
+
+    expect(currentFormCount).toBeGreaterThan(newCount);
+  });
+
+  it('submit button is disabled if form is invalid', () => {
+    component.group.markAsTouched();
+    fixture.detectChanges();
+
+    const submitEl = fixture.nativeElement.querySelector('button[type=submit]');
+    expect(submitEl).toBeTruthy();
+
+    expect(submitEl.disabled).toBeTruthy();
+  });
 });

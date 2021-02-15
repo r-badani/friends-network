@@ -104,7 +104,7 @@
             "tsConfig": [
               "tsconfig.app.json",
               "tsconfig.spec.json",
-              "cypress/tsconfig.json"
+              "e2e/tsconfig.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -112,35 +112,10 @@
           }
         },
         "e2e": {
-          "builder": "@briebug/cypress-schematic:cypress",
+          "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "devServerTarget": "friends-network:serve",
-            "watch": true,
-            "headless": false
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "friends-network:serve:production"
-            }
-          }
-        },
-        "cypress-run": {
-          "builder": "@briebug/cypress-schematic:cypress",
-          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "friends-network:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "friends-network:serve:production"
-            }
-          }
-        },
-        "cypress-open": {
-          "builder": "@briebug/cypress-schematic:cypress",
-          "options": {
-            "devServerTarget": "friends-network:serve",
-            "watch": true,
-            "headless": false
           },
           "configurations": {
             "production": {

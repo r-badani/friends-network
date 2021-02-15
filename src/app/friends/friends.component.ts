@@ -32,7 +32,7 @@ export class FriendsComponent implements OnInit, OnDestroy {
     });
     dialogRef.updateSize('80%');
 
-    dialogRef.componentInstance.onAdd
+    dialogRef.componentInstance.closeForm
       .pipe(takeUntil(this.close$))
       .subscribe(() => {
         dialogRef.close();

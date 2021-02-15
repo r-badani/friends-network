@@ -3,7 +3,7 @@
     <mat-card-header class="c-card__header">
       <mat-card-title class="c-card__title">My Network</mat-card-title>
       <mat-card-subtitle>Lets make connections</mat-card-subtitle>
-      <button type="button" class="c-card__header-closeBtn" mat-icon-button>
+      <button type="button" class="c-card__header-closeBtn" mat-icon-button (click)="onCancel()">
         <mat-icon class="icon">close</mat-icon>
       </button>
     </mat-card-header>
@@ -33,7 +33,7 @@
       </button>
 
       <div class="spacer"></div>
-      <button mat-stroked-button>Cancel</button>
+      <button mat-stroked-button (click)="onCancel()">Cancel</button>
       <button
         mat-raised-button
         color="primary"

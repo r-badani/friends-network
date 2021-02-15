@@ -21,7 +21,7 @@ export class FriendFormComponent {
     return this.userFormArray?.controls as FormGroup[];
   }
 
-  onAdd = new EventEmitter();
+  closeForm = new EventEmitter();
 
   constructor(
     private store: Store<FriendsNetworkState>
@@ -52,7 +52,10 @@ export class FriendFormComponent {
 
   onSubmit() {
     this.store.dispatch(addFriend({ friends: this.group.value.users }));
+  }
+
+  onCancel() {
     this.group.reset();
-    this.onAdd.emit();
+    this.closeForm.emit();
   }
 }

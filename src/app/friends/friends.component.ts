@@ -26,9 +26,10 @@ export class FriendsComponent implements OnInit, OnDestroy {
     private store: Store<FriendsNetworkState>
   ) {}
 
-
   openDialog() {
-    const dialogRef = this.dialog.open(FriendFormComponent);
+    const dialogRef = this.dialog.open(FriendFormComponent, {
+      autoFocus: false,
+    });
     dialogRef.updateSize('80%');
 
     dialogRef.componentInstance.onAdd
@@ -40,7 +41,7 @@ export class FriendsComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.store.dispatch(loadFriendNetwork());
-    this.network = this.store.select(friendNetworkSelector)
+    this.network = this.store.select(friendNetworkSelector);
   }
 
   ngOnDestroy() {

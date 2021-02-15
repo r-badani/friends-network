@@ -1,4 +1,4 @@
-import { Component, ElementRef, Input, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, SimpleChanges } from '@angular/core';
 import { select, selectAll } from 'd3-selection';
 import { scaleOrdinal } from 'd3-scale';
 import {
@@ -10,7 +10,6 @@ import {
 } from 'd3-force';
 import { line } from 'd3-shape';
 import { schemeTableau10 } from 'd3-scale-chromatic';
-import { FriendsService } from '../../friends/services/friends.service';
 import { Link, User } from 'src/app/friends/models';
 const d3 = {
   select,

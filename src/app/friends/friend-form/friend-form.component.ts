@@ -10,7 +10,7 @@ import { addFriend } from '../state/friends.action';
   templateUrl: './friend-form.component.html',
   styleUrls: ['./friend-form.component.scss'],
 })
-export class FriendFormComponent {
+export class FriendFormComponent implements OnInit {
   public group: FormGroup = new FormGroup({});
   public closeForm = new EventEmitter();
 

@@ -9,22 +9,21 @@ import { StoreModule } from '@ngrx/store';
 import { friendsReducer } from './friends/state/friends.reducer';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FriendsModule,
     StoreModule.forRoot([], {
+      // ToDo figure what is needed to make d3v6 work without this
       runtimeChecks: {
         strictStateImmutability: false,
         strictActionImmutability: false,
       },
     }),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

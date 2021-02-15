@@ -22,6 +22,8 @@ App is using ngrx for state management, here are actions that the ngrx store han
 
 ![App structure](https://github.com/r-badani/friends-network/blob/main/docs/assets/ngrxActions.gif)
 
+### Actions
+
 - [Friend-Network] load friend records
 - [Friend-Network] load friend records successful
 - [Friend-Network] load friend records unsuccessful

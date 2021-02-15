@@ -63,7 +63,7 @@ export class NetworkChartComponent implements OnInit {
   private _options = {
     width: null,
     height: null,
-    margin: 200,
+    margin: 120,
   };
 
   constructor() {}

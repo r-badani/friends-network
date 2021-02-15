@@ -10,7 +10,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { NetworkChartModule } from '@components';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { BaseFormComponent } from './friend-form/base-form/base-form.component';
 import { FriendFormComponent } from './friend-form/friend-form.component';
 import { FriendsComponent } from './friends.component';

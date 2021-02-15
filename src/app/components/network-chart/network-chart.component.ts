@@ -268,7 +268,7 @@ export class NetworkChartComponent implements OnInit {
     if ((nodes && nodes.isFirstChange()) || (links && links.isFirstChange())) {
       return;
     }
-    if ((nodes) || (arguments)) {
+    if ((nodes) || (links)) {
       this.removeGraph()
       this.generateChart()
     }

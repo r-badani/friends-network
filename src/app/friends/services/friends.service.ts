@@ -26,11 +26,6 @@ export class FriendsService {
     return -1;
   }
 
-  /**
-   * @desc adds a user in the members list
-   * @param User personal data of a given user
-   * @return int - user id of the user
-   */
   private addIndividualUser(user: User): number {
     const newUser: User = {
       ...user,
@@ -44,7 +39,6 @@ export class FriendsService {
   private addConnection(source: number, target: number): void {
     if (source == target) return; // source user Id and target user Id can not be same
 
-    debugger;
     const connection = this.network.links.find(
       (element) => element.source == source && element.target == target
     );

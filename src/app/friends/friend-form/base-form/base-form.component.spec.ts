@@ -23,7 +23,7 @@ describe('BaseFormComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create base form', () => {
     expect(component).toBeTruthy();
   });
 

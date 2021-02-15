@@ -55,7 +55,7 @@ describe('FriendsComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create component with required dependencies', () => {
     expect(component).toBeTruthy();
   });
 });

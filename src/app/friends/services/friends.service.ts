@@ -9,6 +9,7 @@ export class FriendsService {
     users: [],
     links: [],
   };
+  constructor() {}
 
   private isExistingUser(user: User): number {
     // user found if all the attributes i.e., name, age and weight match
@@ -93,6 +94,4 @@ export class FriendsService {
       ...this.network,
     });
   }
-
-  constructor() {}
 }

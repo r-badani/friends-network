@@ -67,6 +67,9 @@ export class NetworkChartComponent implements OnInit {
     margin: 100,
   };
 
+  constructor() {}
+
+
   /**
    * Draws initial svg container for the chart
    */
@@ -245,7 +248,6 @@ export class NetworkChartComponent implements OnInit {
     this.hoverCard();
   }
 
-  constructor(private service: FriendsService) {}
 
   private removeGraph(): void {
     this._svg.selectAll('*').remove();

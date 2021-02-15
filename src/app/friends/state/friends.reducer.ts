@@ -31,7 +31,7 @@ export const friendsReducer = createReducer(
     (state, payload): FriendsNetworkState => {
       const newState = {
         ...state,
-        network: payload.network,
+        network: payload?.network,
       };
       return newState;
     }
@@ -42,7 +42,7 @@ export const friendsReducer = createReducer(
     (state, payload): FriendsNetworkState => {
       return {
         ...state,
-        error: payload.error,
+        error: payload?.error,
       };
     }
   ),
@@ -51,7 +51,7 @@ export const friendsReducer = createReducer(
     (state, payload): FriendsNetworkState => {
       const newState = {
         ...state,
-        network: payload.network,
+        network: payload?.network,
       };
       return newState;
     }

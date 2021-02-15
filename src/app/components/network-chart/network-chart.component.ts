@@ -266,24 +266,9 @@ export class NetworkChartComponent implements OnInit {
   ngOnChanges(change: SimpleChanges): void {
     const { nodes, links } = change;
 
-    // skip first change
     if ((nodes && nodes.isFirstChange()) || (links && links.isFirstChange())) {
       return;
     }
-
-    // if (chartLayout && chartLayout.isFirstChange()) {
-    //   return;
-    // }
-
-    // /* changes to chart layout
-    //     warrants for chart destroy &redraw */
-    // if (chartLayout) {
-    //   this.removeGraph();
-    //   this.loadGraph()
-    //   return;
-    // }
-
-    // Just update the data of the chart.
     if (nodes && links) {
       this.removeGraph()
       this.generateChart()

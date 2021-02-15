@@ -12,6 +12,7 @@ import { addFriend } from '../state/friends.action';
 })
 export class FriendFormComponent {
   public group: FormGroup = new FormGroup({});
+  public closeForm = new EventEmitter();
 
   get userFormArray(): FormArray {
     return this.group?.get('users') as FormArray;
@@ -21,11 +22,8 @@ export class FriendFormComponent {
     return this.userFormArray?.controls as FormGroup[];
   }
 
-  closeForm = new EventEmitter();
 
-  constructor(
-    private store: Store<FriendsNetworkState>
-  ) {}
+  constructor(private store: Store<FriendsNetworkState>) {}
 
   ngOnInit(): void {
     this.initializeUserFormGroup();

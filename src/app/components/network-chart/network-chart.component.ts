@@ -66,7 +66,7 @@ export class NetworkChartComponent implements OnInit {
     margin: 150,
   };
 
-  constructor() {}
+  constructor() { }
 
 
   /**
@@ -120,7 +120,7 @@ export class NetworkChartComponent implements OnInit {
   }
 
   private initializeSimulation() {
-    console.log('initializeSimulation',this._nodes)
+    console.log('initializeSimulation', this._nodes)
     this._simulation = d3
       .forceSimulation(this._nodes)
       .force('charge', d3.forceManyBody().strength(100))
@@ -156,7 +156,7 @@ export class NetworkChartComponent implements OnInit {
   }
 
   private drawNodes() {
-    console.log('drawNodes',this._nodes)
+    console.log('drawNodes', this._nodes)
     this._node = this._svg
       .selectAll('circle')
       .data(this._nodes)
@@ -196,11 +196,10 @@ export class NetworkChartComponent implements OnInit {
       .attr('height', (d: any) => 70)
       .attr('width', (d: any) => 70)
       .attr('href', (d: any) => {
-        var imagePath = `https://avatars.dicebear.com/4.5/api/avataaars/${
-          d.name + d.age + d.weight
-        }.svg?radius=50&mouth[]=smile&bold=1&fontSize=70&background=${encodeURIComponent(
-          '#f7fde6'
-        )}`;
+        var imagePath = `
+        https://api.dicebear.com/7.x/initials/svg?seed=${d.name + d.age + d.weight
+          }
+          )}`;
         return imagePath;
       })
       .attr('pointer-events', 'none');
